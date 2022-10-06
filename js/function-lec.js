@@ -88,13 +88,14 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-
+// calculateTip converts an integer to a decimal by dividing the integer by 100 to get the percentage
 console.log("calculateTip()")
 function calculateTip(tipPercentage, total) {
+    tipPercentage = tipPercentage/100;
     let tip = tipPercentage * total;
     return tip;
 }
-
+console.log(calculateTip(5,10));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -103,9 +104,11 @@ function calculateTip(tipPercentage, total) {
  */
 
 // TODO
+let billTotal = prompt("What is your bill total?");
+let tip = prompt("What percentage of the total would you like to tip?");
 
-
-
+console.log("call calc tip",calculateTip(tip, billTotal));
+// alert("Here is your tip amount " + "$" + calculateTip(billTotal, tip).toFixed(2) + " thank you!");
 
 /**
  * TODO:
@@ -123,7 +126,17 @@ function calculateTip(tipPercentage, total) {
  */
 
 // TODO
+function applyDiscount(price) {
+    let discountPercent = 0.10;
+    let discountTotal = discountPercent * price;
+    let discount = price - discountTotal;
+    return discount;
+}
 
+console.log("applyDiscount()");
+console.log("Expected Output: 10",applyDiscount(100));
+console.log("Expected Output: 45",applyDiscount(50));
+console.log("Expected Output: 9",applyDiscount(10));
 
 
 // Make a function named isOdd(number)
@@ -140,7 +153,58 @@ function addFive(input){return (input + 5)}
 // Make a function named isMultipleOfFive(input)
 function isMultipleOfFive(input){return (input % 5 !== 0)}
 // Make a function named isThree(input)
-function isThree(input){}
+function isThree(input){return input == 3;}
+// Make a function named isMultipleOfThree(input)
+let isMultipleOfThree = (number) => number % 3 === 0;
+// Make a function named isMultipleOfThreeAndFive(input)
+let isMultipleOfThreeAndFive = (number) => number % 3 === 0 || number % 5 === 0;
+// Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+let isMultipleOf = (target, n) => target % n === 0;
+// Make a function named isTrue(boolean)
+let isTrue = (bool) => bool === true;
+// Make a function named isFalse(boolean)
+let isFalse = (bool) => bool === false;
+// Make a function named isTruthy(input), remember that values other than true will behave like true
+let isTruthy = (bool) => bool == true;
+// Make a function named isFalsy(input), remember that values other than false behave like false
+let isFalsy = (bool) => bool == false;
+// Make a function named isVowel(letter)
+function isVowel(letter) {
+    switch (letter) {
+        case 'a':
+            return true;
+        case'e':
+            return true;
+        case 'i':
+            return true;
+        case 'o':
+            return true;
+        case 'u':
+            return true;
+        case 'A':
+            return true;
+        case 'E':
+            return true;
+        case 'I':
+            return true;
+        case 'O':
+            return true;
+        case 'U':
+            return true;
+        default:
+            return false;
+    }
+}
+
+console.log("isVowel() input: I Expected: true:", isVowel('I'))
+
+// Make a function named isConsonant(letter)
+function isConsonant(letter){
+    return !isVowel(letter);
+}
+console.log("input d Expected: true",isConsonant("d"))
+
+
 
 
 
