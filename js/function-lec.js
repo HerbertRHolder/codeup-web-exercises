@@ -1,5 +1,5 @@
 // Use Strict
-
+(function ())
 
 // anonymous functions
 // let Increment = function(x) {
@@ -104,18 +104,16 @@ console.log(calculateTip(5,10));
  */
 
 // TODO
-let billTotal = prompt("What is your bill total?");
-let tip = prompt("What percentage of the total would you like to tip?");
 
-if (tip.endsWith('%'))
-{
-    tip = tip.replace('%','')
-}
-
-
-console.log("call calc tip",calculateTip(tip, billTotal));
-alert("Here is your tip amount " + "$" + calculateTip(tip,billTotal).toFixed(2) + " thank you!");
-
+    let billTotal = prompt("What is your bill total?");
+    let tipPercent = prompt("What percentage of the total would you like to tip?");
+    if (tipPercent.endsWith('%'))
+    tipPercent = tipPercent.replace('%','')
+    // console.log("call calc tip",calculateTip(tip, billTotal));
+        let tipConversion = parseInt(calculateTip(tipPercent,billTotal).toFixed(2))
+        let billConversion = parseInt(billTotal);
+    alert("Your tip amount is $" + tipConversion + " thank you!");
+    alert('Here is your total bill: $' + (billConversion + tipConversion).toFixed(2) );
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -132,17 +130,12 @@ alert("Here is your tip amount " + "$" + calculateTip(tip,billTotal).toFixed(2) 
  */
 
 // TODO
-function applyDiscount(price) {
-    let discountPercent = 0.10;
+function applyDiscount(price,discountPercent) {
     let discountTotal = discountPercent * price;
     let discount = price - discountTotal;
-    return discount;
+    return price + discount;
 }
 
-console.log("applyDiscount()");
-console.log("Expected Output: 10",applyDiscount(100));
-console.log("Expected Output: 45",applyDiscount(50));
-console.log("Expected Output: 9",applyDiscount(10));
 
 
 // Make a function named isOdd(number)
