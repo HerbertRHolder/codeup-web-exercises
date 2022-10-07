@@ -90,7 +90,7 @@ console.log(isTwo(random));
 
 // calculateTip converts an integer to a decimal by dividing the integer by 100 to get the percentage
 console.log("calculateTip()")
-function calculateTip(tipPercentage, total) {
+function calculateTip(tipPercentage, total ) {
     tipPercentage = tipPercentage/100;
     let tip = tipPercentage * total;
     return tip;
@@ -107,8 +107,14 @@ console.log(calculateTip(5,10));
 let billTotal = prompt("What is your bill total?");
 let tip = prompt("What percentage of the total would you like to tip?");
 
+if (tip.endsWith('%'))
+{
+    tip = tip.replace('%','')
+}
+
+
 console.log("call calc tip",calculateTip(tip, billTotal));
-// alert("Here is your tip amount " + "$" + calculateTip(billTotal, tip).toFixed(2) + " thank you!");
+alert("Here is your tip amount " + "$" + calculateTip(tip,billTotal).toFixed(2) + " thank you!");
 
 /**
  * TODO:
