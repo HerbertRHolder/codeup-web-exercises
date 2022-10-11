@@ -39,26 +39,9 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+ function analyze(color){
 
-// function analyzeColor(color){
-//    if(color === "blue"){
-//        console.log("Blue is the color of the ocean");
-//    }else if (color === "red"){
-//        console.log("Red is the color of strawberries");
-//    }else if (color === "orange"){
-//        console.log("Orange is the color of the fruit!");
-//    }else if(color === "yellow"){
-//        console.log("yellow is the color of a lemon!");
-//    }else if (color === "indigo"){
-//        console.log("indigo is my favorite color");
-//    }else if (color === "violet"){
-//        console.log("violet is the color of a lotus");
-//    }else if (color === "green"){
-//        console.log("green is the color of the grass");
-//    }else {
-//        console.log("I do not know a color by the name of that.");
-//    }
-// }
+}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -106,6 +89,13 @@ function analyzeColor(color){
     }
     return color;
 }
+
+function tester(multiColor){
+    if (multiColor === 'red'){
+
+    }
+}
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -137,6 +127,11 @@ alert("You like the color " + analyzeColor(userColor) + ", I like that color too
  * return value.
  */
 function calculateTotal(luckyNumber,totalAmount){
+if (typeof luckyNumber !== 'number' || typeof totalAmount !== 'number'){
+    console.log("This is not a number");
+    return 0;
+}else {
+
     luckyNumber = parseInt(luckyNumber);
     let luckyOne = .10;
     let luckyTwo = .25;
@@ -147,34 +142,37 @@ function calculateTotal(luckyNumber,totalAmount){
         case 0:
             console.log("Picked up a 0. Sorry you will not receive a discount");
             break;
-    case 1:
-        console.log("Picked up a 1. Its your lucky day you will earn " + (luckyOne * 100) + "%");
-        console.log("Your discount applied is $"+(totalAmount - (luckyOne*totalAmount)))
-        return totalAmount - (luckyOne*totalAmount)
-        break;
-    case 2:
-        console.log("Picked up a 2. Its your lucky day you will earn " + (luckyTwo * 100) + "%");
-        console.log("Your discount applied is $"+(totalAmount - (luckyTwo*totalAmount)))
-        return totalAmount - (luckyTwo*totalAmount)
-        break;
-    case 3:
-        console.log("Picked up a 3. Its your lucky day you will earn " + (luckyThree * 100) + "%");
-        console.log("Your discount applied is $"+(totalAmount - (luckyThree*totalAmount)))
-         return totalAmount - (luckyThree*totalAmount);
-        break;
-    case 4:
-        console.log("Picked up a 4. Its your lucky day you will earn " + (luckyFour * 100) + "%");
-        console.log("Your discount applied is $"+(totalAmount - (luckyFour*totalAmount)))
-        return totalAmount - (luckyFour*totalAmount);
-        break;
+        case 1:
+            console.log("Picked up a 1. Its your lucky day you will earn " + (luckyOne * 100) + "%");
+            console.log("Your discount applied is $"+(totalAmount - (luckyOne*totalAmount)))
+            return totalAmount - (luckyOne*totalAmount);
+            break;
+        case 2:
+            console.log("Picked up a 2. Its your lucky day you will earn " + (luckyTwo * 100) + "%");
+            console.log("Your discount applied is $"+(totalAmount - (luckyTwo*totalAmount)))
+            return totalAmount - (luckyTwo*totalAmount);
+            break;
+        case 3:
+            console.log("Picked up a 3. Its your lucky day you will earn " + (luckyThree * 100) + "%");
+            console.log("Your discount applied is $"+(totalAmount - (luckyThree*totalAmount)))
+            return totalAmount - (luckyThree*totalAmount);
+            break;
+        case 4:
+            console.log("Picked up a 4. Its your lucky day you will earn " + (luckyFour * 100) + "%");
+            console.log("Your discount applied is $"+(totalAmount - (luckyFour*totalAmount)))
+            return totalAmount - (luckyFour*totalAmount);
+            break;
         case 5:
             console.log("Picked up a 5. Its your lucky day you will everything for free");
             break;
         default:
             console.log("Looks like that's not a number or not in the range of numbers");
 
-    }
-}
+    }// end of switch
+
+}// end of else
+
+}// end of function
 
 
 /**
@@ -221,4 +219,4 @@ if (typeof userNumber === 'number'){
 
 }
 
-enteredNumber();
+console.log(enteredNumber());
