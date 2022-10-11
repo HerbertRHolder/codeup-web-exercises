@@ -598,3 +598,5 @@ function rollDice(sides){
 console.log("rollDice()");
 console.log("input 8:Expected random number 1-8",rollDice(8));
 
+
+
