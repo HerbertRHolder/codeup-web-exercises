@@ -601,5 +601,117 @@ function rollDice(sides){
 console.log("rollDice()");
 console.log("input 8:Expected random number 1-8",rollDice(8));
 
+// Simple Functions
+function returnTwo(){
+    return 2;
+}
 
+console.log("returnTwo()");
+console.log(returnTwo());
+
+function sayHowdy(){
+    console.log("Howdy!");
+}
+
+
+function returnName(){
+    return "Herb!";
+}
+
+console.log("returnName()");
+console.log(returnName());
+
+function addThree(number){
+    return number+3;
+}
+
+console.log("addThree()");
+console.log(addThree(5));
+
+function sayString(str){
+    return str;
+}
+
+console.log("sayString()");
+console.log(sayString("codeup"));
+
+function identity(input){
+    return input;
+}
+
+function getRandomNumber(min,max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log("getRandomNumber()")
+console.log(getRandomNumber(1,6));
+
+function first(input){
+    return input[0];
+}
+
+console.log("first()");
+console.log(first("herb"));
+
+function last(input){
+    return input[input.length-1];
+}
+
+console.log("last()");
+console.log(rest("herb"));
+
+function rest(input){
+    return input.substring(1);
+}
+
+console.log("rest()");
+console.log(rest("herb"));
+
+function reverse(input){
+    input.reverse();
+}
+
+function isNumeric(input){
+    input = parseFloat(input);
+    return typeof input === 'number';
+}
+
+function count(input){
+    return input.length;
+}
+
+function add(a, b ){
+    return a+b;
+}
+function subtract(a, b ){
+    return a-b;
+}
+function multiply(a, b ){
+    return a*b;
+}
+
+function divide(a, b ){
+    return a/b;
+}
+
+function remainder(a, b){
+    return a%b;
+}
+
+function square(a){
+    return a*a;
+}
+function sumOfSquares(a, b){
+    return add(square(a),square(b));
+}
+
+function doMath(op, a, b){
+    if (op === '+'){return a+b;}
+    if (op === '-'){return a-b;}
+    if (op === '*'){return a*b;}
+    if (op === '/'){return a/b;}
+
+    return 0;
+
+}
 
