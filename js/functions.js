@@ -70,7 +70,7 @@ let random = Math.floor((Math.random() * 3) + 1);
 
 console.log("isTwo()")
 function isTwo(integer){
-    return (integer == 2 || integer == '2')
+    return (integer === 2 || integer === '2')
 }
 console.log(isTwo(random));
 
@@ -91,8 +91,7 @@ console.log(isTwo(random));
 console.log("calculateTip()")
 function calculateTip(tipPercentage, total ) {
     tipPercentage = tipPercentage/100;
-    let tip = tipPercentage * total;
-    return tip;
+    return tipPercentage * total;
 }
 console.log(calculateTip(5,10));
 /**
@@ -130,12 +129,16 @@ console.log(calculateTip(5,10));
 
 // TODO
 function applyDiscount(price,discountPercent) {
-    let discountTotal = discountPercent * price;
-    let discount = price - discountTotal;
-    return price + discount;
+    if (typeof price === 'number' && typeof discountPercent === 'number'){
+        price = parseFloat(price);
+        discountPercent = parseFloat(discountPercent);
+        let discountTotal = discountPercent * price;
+        return price - discountTotal;
+    }
+    return 0;
 }
 
-
+console.log(applyDiscount())
 
 // Make a function named isOdd(number)
 // Make a function named isEven(number)

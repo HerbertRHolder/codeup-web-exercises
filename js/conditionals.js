@@ -63,24 +63,21 @@ console.log("Analyze Color", analyzeColorV1(randomColor));
                 return ("Red is the color of strawberries");
             case "orange":
                 return ("Orange is the color of the fruit!");
-
-                break;
-            case "yellow":
+                case "yellow":
                 return ("yellow is the color of a lemon!");
             case "green":
-                return ("green is the color of the grass");;
+                return ("green is the color of the grass");
             case "blue":
                 return ("Blue is the color of the ocean");
             case "indigo":
                 return ("indigo is my favorite color");
             case "violet":
                 return ("violet is the color of a lotus");
-                break;
             default:
                 return ("I am not sure what color that is.");
-        }
-        return color;
-    }
+        }// end of switch
+
+    }// end of function
 
 
     /**
