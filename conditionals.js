@@ -192,9 +192,12 @@ let luckyNumber = Math.floor(Math.random() * 6);
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
  *
+ *
  * - whether the number is even or odd
  * - what the number plus 100 is
  * - if the number is negative or positive
+ *
+ *
  *
  * Do *NOT* display any of the above information
  * if the user enters a value that is not of the number data type.
@@ -210,11 +213,11 @@ let userNumber = prompt("Please enter a number?");
 userNumber = parseInt(userNumber);
 
 console.log("type of",typeof userNumber);
-if (typeof userNumber === 'number'){
-    (userNumber % 2 === 0) ? console.log( userNumber + " this number is Even") :
-        console.log(userNumber + " This number is Odd");
+ if (typeof userNumber === 'number'){
+    (userNumber % 2 === 0) ? alert( userNumber + " this number is Even") :
+        alert(userNumber + " This number is Odd");
     console.log("This is the number added by 100: "+(userNumber + 100));
-    (userNumber < 0) ? console.log("This number is negative") : console.log("This number is positive")
+    (userNumber < 0) ? console.log("This number is negative") : console.log("This number is positive");
 }
 
 }

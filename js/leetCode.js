@@ -37,15 +37,16 @@ return false;
 }// end of function
 
 
-let nums = [5,4,3,2,1];
-// console.log(increasingTriplet(nums));
+let nums = [2,1,5,0,4,6];
+console.log(increasingTriplet(nums));
 
 
 function tripletGreater(nums){
     for (let i = 0; i < nums.length;i++){
-        if ((nums[i] < nums[i+1]) && (nums[i+1] < nums[i+3])) {
-            return true;
-        } //end if
+        if ( (nums[i] < nums[i+1]) && (nums[i+1] < nums[i+2]) ) {
+            return ((nums[i] < nums[i+1]) && (nums[i+1] < nums[i+2]));
+        }//end if
+
     }// end of for
     return false;
 }// end of function
