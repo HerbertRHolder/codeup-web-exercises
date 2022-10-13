@@ -706,12 +706,35 @@ function sumOfSquares(a, b){
 }
 
 function doMath(op, a, b){
-    if (op === '+'){return a+b;}
-    if (op === '-'){return a-b;}
-    if (op === '*'){return a*b;}
-    if (op === '/'){return a/b;}
+    if (op === '+'){return add(a,b);}
+    if (op === '-'){return subtract(a,b);}
+    if (op === '*'){return multiply(a,b);}
+    if (op === '/'){return divide(a,b);}
 
     return 0;
 
 }
 
+console.log("doMath()")
+console.log("input *,1,3",doMath("*",1,3));
+
+function howManySpaces(str){
+    str = str.split('');
+    let i = 0;
+    let j = (str.length);
+    let count1 = 0;
+    let count2 = 0;
+
+        while(str[i++] === ' '){
+            count1++;
+        }
+        while (str[--j] === ' '){
+            count2++;
+        }
+
+    return count1 + count2;
+}
+
+
+console.log("howManySpaces()")
+console.log("--hello------: Expected 10: ",howManySpaces("  hello        "));
