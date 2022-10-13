@@ -717,7 +717,8 @@ function doMath(op, a, b){
 
 console.log("doMath()")
 console.log("input *,1,3",doMath("*",1,3));
-
+// Even more function bonuses
+// 1
 function howManySpaces(str){
     str = str.split('');
     let i = 0;
@@ -734,7 +735,33 @@ function howManySpaces(str){
 
     return count1 + count2;
 }
-
-
 console.log("howManySpaces()")
 console.log("--hello------: Expected 10: ",howManySpaces("  hello        "));
+
+// 2
+
+function replace1(str1,str2){
+    if (str1.includes(str2)){
+        return str1.replace(str2,"");
+    }
+    return str1;
+}//end of function
+
+
+console.log("replace1()",replace1('cati',"at"));
+
+// 3
+function hasA(str){
+    return (str.endsWith('a'));
+}
+
+console.log("hasA()");
+console.log("input crayola",hasA("crayola"))
+
+// 4
+function countFirstSpaces(str){
+    return str.match(/\s+[a-z]/g || [])[0].length-1;
+}
+
+console.log("countFirstSpaces()");
+console.log("input ---cat---:Expected 3: ",countFirstSpaces("   cat   "));
