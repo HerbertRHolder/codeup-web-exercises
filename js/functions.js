@@ -765,3 +765,32 @@ function countFirstSpaces(str){
 
 console.log("countFirstSpaces()");
 console.log("input ---cat---:Expected 3: ",countFirstSpaces("   cat   "));
+
+function returnTrueMessage(){
+    return "Hey, it's true!";
+}
+function returnFalseMessage(){
+    return "Hey, it's false!";
+}
+
+console.log(returnFalseMessage())
+
+function returnMessage(){
+    return returnTrueMessage();
+}
+
+function willLoginUser(username,password,userAge,isAdmin){
+    if (typeof username === 'string' && typeof password === 'string'){
+        if (typeof isAdmin === "boolean" && isAdmin === true){
+            return username !== password;
+        }else if (parseInt(userAge) >= 18){
+            return username !== password;
+        }else {
+            return false;
+        }
+    }
+
+}
+
+console.log("willLoginUser()");
+console.log("herb,123,18,false",willLoginUser("herb","123", 18,false));
