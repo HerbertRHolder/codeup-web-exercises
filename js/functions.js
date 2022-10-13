@@ -766,19 +766,23 @@ function countFirstSpaces(str){
 console.log("countFirstSpaces()");
 console.log("input ---cat---:Expected 3: ",countFirstSpaces("   cat   "));
 
+// 5
 function returnTrueMessage(){
     return "Hey, it's true!";
 }
+
+// 5
 function returnFalseMessage(){
     return "Hey, it's false!";
 }
 
 console.log(returnFalseMessage())
 
+// 5
 function returnMessage(){
     return returnTrueMessage();
 }
-
+// 6
 function willLoginUser(username,password,userAge,isAdmin){
     if (typeof username === 'string' && typeof password === 'string'){
         if (typeof isAdmin === "boolean" && isAdmin === true){
