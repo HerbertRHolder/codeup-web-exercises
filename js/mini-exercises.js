@@ -49,4 +49,15 @@ function isSameLength(word1,word2){
 console.log("isSameLength()")
 console.log(isSameLength('cat',"dog"));
 
+let num = 0;
 
+do {
+    console.log(num);
+    num+=5;
+}while(num < 100)
+
+
+while (num < 100){
+    console.log(num)
+    num+=5;
+}

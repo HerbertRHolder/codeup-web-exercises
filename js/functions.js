@@ -798,3 +798,9 @@ function willLoginUser(username,password,userAge,isAdmin){
 
 console.log("willLoginUser()");
 console.log("herb,123,18,false",willLoginUser("herb","123", 18,false));
+let i = 0;
+while(i < 10) {
+    console.log(i);
+
+    i++;
+}
