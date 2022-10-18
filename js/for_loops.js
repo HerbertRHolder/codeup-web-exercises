@@ -1,13 +1,13 @@
-function showMultiplicationTable(number){
-    for(let i=0;i<=10;i++){
-
-        console.log(number + " X " + i + " = " + (number*i));
-
-
-    }
-}// end of function
-
-(showMultiplicationTable(7));
+// function showMultiplicationTable(number){
+//     for(let i=0;i<=10;i++){
+//
+//         console.log(number + " X " + i + " = " + (number*i));
+//
+//
+//     }
+// }// end of function
+//
+// (showMultiplicationTable(7));
 
 
 for (let i=1;i<=10;i++){
@@ -19,15 +19,26 @@ for (let i=1;i<=10;i++){
     }
 
 }// end of function
-
-
-for (let i=1;i<10;i++){
-    for (let j=1;j<=i;j++){
-        console.log(i);
+let i=0;
+while (i<10){
+    console.log( `${i}`.repeat(i) );
     }
-}
 
-for (let i=100;i>0;i-=5){
-    console.log(i);
-}
+// function repeatString(str,i){
+//     if (i>9){return 0;}
+//     console.log(i);
+//     return repeatString(str,i++);
+// }
+//
+// console.log(repeatString("", 0));
 
+
+//
+// for (let i=100;i>0;i-=5){
+//     console.log(i);
+// }
+
+
+// for (let i=1;i<9;i++){
+//     console.log(i.toString().repeat(i));
+// }
