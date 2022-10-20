@@ -61,11 +61,13 @@
              console.log(`Amount spent: ${shopper.amount}`);
              console.log(`Your applied discount for spending over $200 is : ${discounted} `);
          }else {
-             console.log(`For ${shopper.name}`)
+             console.log(`For ${shopper.name}`);
              console.log(`Amount spent: ${shopper.amount}`);
              console.log(`Your will not receive a discount because you spend under $200.`);
          }
     });
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -150,7 +152,17 @@ for (let i=0;i<books.length;i++){
      *   `showBookInfo` function.
      */
 
-    function createBook(title, firstName, lastName){
-
+    function createBook(title, author){
+       author = author.split(" ");
+        let book = {
+            name: title,
+            author: {
+                firstName: author[0],
+                lastName: author[1]
+            }
+        }
+        return book;
     }
+
+
 })();

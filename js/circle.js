@@ -38,8 +38,11 @@
     circle.radius = 5;
 
     // log info about the circle
-    console.log("Raw circle information");
-    circle.logInfo(false);
-    console.log("Circle information rounded to the nearest whole number");
-    circle.logInfo(true);
+    // console.log("Raw circle information");
+    // circle.logInfo(false);
+    // console.log("Circle information rounded to the nearest whole number");
+    // circle.logInfo(true);
+
+
 })();
+
