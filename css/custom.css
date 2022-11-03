@@ -1,0 +1,34 @@
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128,128,.6);
+}
+.banner h1 {
+    text-align: center;
+}
+
+
+.jumbotron{
+    width: 100%;
+    height: 346px;
+    background-image: url("../img/pizza.png");
+    /*background-color: blue;*/
+    background-size: cover;
+    background-repeat:no-repeat;
+    /*background-position: 0px -800px;*/
+    /*outline:dashed red;*/
+}
+
