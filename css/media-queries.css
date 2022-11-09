@@ -1,0 +1,217 @@
+
+
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    outline: dashed red;
+}
+/*This is "Skip to main content"*/
+.alert-info {
+    display: none;
+}
+.nav-links{
+   margin: 0;
+   padding: 0;
+}
+
+/*This is the Company*/
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert-info a{
+    text-decoration: none;
+    color: black;
+}
+
+/*This is "Home,About, work, contact."*/
+header {
+    display: flex;
+    align-items: center;
+
+}
+.nav-links_cont{
+    width: 100%;
+}
+ul {
+    width: 40%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+    gap: 1rem;
+    outline: red dashed;
+
+}
+ul.nav-links li {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:30px ;
+}
+ul.nav-links li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* +++++++++++++++++++Herbs Code ++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+.nav-links li {
+    text-decoration: none;
+    list-style: none;
+    /* margin-right: 30px; */
+}
+h1 {
+    font-size: 4rem;
+}
+.hidden-on-desktop{
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+}
+
+.header-img {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image1 {
+    width:80%;
+    outline: dashed red;
+}
+.main {
+    width: 339px;
+    font-weight: 100;
+        
+}
+.sub-section {
+    display: inline;
+    max-width: 339px
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+/* +++++++++++++++++++Herbs Code end ++++++++++++++++++++++++++++++++++++ */
+
+
+@media screen and (max-width:890px) {
+    .image1 {
+        width:339px;
+    }
+}
+@media screen and (min-width:890px) {
+    /* .image1{
+        width: 300px;
+        height: 385px;
+    } */
+    .main {
+        width: 500px;
+            
+    }
+
+}
+@media screen and (max-width:890px)
+{
+    .alert-info{
+        background-color: rgb(203,255,254);
+        border: rgb(224,225,224) solid 3px;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        height: 50px;
+        outline: dashed red;
+    }
+    header {
+        /* width: 100vw; */
+        display: flex;
+        /* justify-content: center; */
+        padding: 0;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        
+    }
+    .nav-links_cont{
+        width: 100%;
+    }
+    ul.nav-links{
+        width: 100%;
+        margin-top:1rem;
+        padding: 0;
+        display: flex;
+        outline: dashed red;
+    }
+    .nav-links li {
+        width: 100%;
+        display: flex;
+    }
+    .image1 {
+        margin-top: 1rem;
+        width:80%;
+        outline: dashed red;
+    }
+    header h1{
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        gap: 1rem;
+        outline: dashed red;
+    
+    }
+
+    ul li {
+        background-color: gray;
+        background-color: rgb(224,225,224);
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: dashed red;
+
+    }
+}
