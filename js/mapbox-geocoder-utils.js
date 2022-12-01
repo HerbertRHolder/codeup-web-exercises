@@ -34,6 +34,7 @@ function geocode(search, token) {
  *
  * EXAMPLE:
  *
+ * 
  *  reverseGeocode({lat: 32.77, lng: -96.79}, API_TOKEN_HERE).then(function(results) {
  *      // do something with results
  *  })
