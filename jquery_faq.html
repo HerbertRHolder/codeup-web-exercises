@@ -1,34 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
 </head>
-<style>
-    .invisible{
-        visibility: hidden;
-    }
-</style>
 <body>
-    <p>Cryptids of Cornwall:</p>
-
 <dl>
-    <dt id="dt">Beast of Bodmin</dt>
-    <dd class="invisible" id="dd">A large feline inhabiting Bodmin Moor.</dd>
+    <dt>What's the most visited national park?</dt>
+    <dd class="invisible">blue ridge parkway</dd>
 
-    <dt id="dt">Morgawr</dt>
-    <dd class="invisible" id="dd">A sea serpent.</dd>
+    <dt>How many areas are in the national park system?</dt>
+    <dd class="invisible">423</dd>
 
-    <dt id="dt">Owlman</dt>
-    <dd class="invisible" id="dd">A giant owl-like creature.</dd>
+    <dt>How many national are there in the U.S.?</dt>
+    <dd class="invisible">63</dd>
+
+    <dt>What is the smallest national park site?</dt>
+    <dd class="invisible">tadeusz kosciuszko national memorial</dd>
+
+    <dt>Who is director of the national park service?</dt>
+    <dd class="invisible">Charles f. "chuck" sams III</dd>
+
+    <dt>How old is the national park system?</dt>
+    <dd class="invisible">106 years</dd>
+
+    <dt>How many people visit the national parks?</dt>
+    <dd class="invisible">297,000,000</dd>
+
+    <dt>What department is the national park system a part of?</dt>
+    <dd class="invisible">The interior</dd>
+
+    <dt>What is the biggest national park?</dt>
+    <dd class="invisible">Wrangell-St. Elias National Park</dd>
+
+    <dt>what is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error magni nobis nostrum perferendis veniam. Accusantium, beatae consequuntur corporis cum deleniti dolor eum facere ipsa mollitia nobis quae quis ratione sed?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta distinctio dolores eligendi illo impedit ipsam officia repudiandae rerum voluptatibus! Beatae, culpa, magnam. A amet blanditiis eos fugiat praesentium quaerat?</dd>
+
+    <dt>are pets allowed in national parks?</dt>
+    <dd class="invisible">yes! in recreational areas! :)</dd>
 </dl>
 
+<button type="button" id="showBtn">Show my answers</button>
+
+<!-- Traversing Methods -->
+<section>
+    <h3>Denali National Park</h3>
+    <ul>
+        <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
+        <li>The year of 1910 marked the first time that anyone had successfully summited Denali. It was a group of local residents who celebrated with hot chocolate and donuts.</li>
+        <li>Sable Pass inside DNP is known to be the best area to spot massive grizzly bears.</li>
+        <li>There are 169 different bird species, 39 mammal species, 14 fish species, and one species of amphibian known in Denali, whilst the park is also home to 1,500 species of vascular plants, lichens and mosses.</li>
+    </ul>
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>World's First National Park.</li>
+        <li>A designated World Heritage Site and designated Biosphere Reserve.</li>
+        <li>3,472 square miles or 8,987 square km.</li>
+        <li>96 % in Wyoming an 3 % in Montana.</li>
+    </ul>
+    <h3>Yosemite National Park</h3>
+    <ul>
+        <li>El Capitan is the largest granite monolith in the world. It rises more than 3,000 feet above the valley floor and is a favorite for experienced rock climbers.</li>
+        <li>Yosemite Falls: This is the tallest waterfall in North America. Snow runoff cascades down the 2,425 foot drop, with peak flow in May. In winter, an ice cone is often visible at the top of the falls.</li>
+        <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias. </li>
+        <li>There are 840 miles of trails to hike in Yosemite National Park</li>
+    </ul>
+    <button id="highlight-btn">Highlight</button>
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    // Attributes and CSS
+    $("#showBtn").click(function () {
+        $("dd").toggleClass("invisible")
+    });
+
+    $("dt").click(function (){
+        $(this).css("background", "yellow")
+    })
+
+    // Traversing Methods
+
+    // 3. Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+    // $('#highlight-btn').on('click', function() {
+    //     $('ul').each(function(index, element) {
+    //         $(element)
+    //             .children()
+    //             .last()
+    //             .css('background-color', 'yellow');
+    //     });
+    // });
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="js/jq-remove"></script>
+    // 4. When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+
+    $('h3').on('click', function() {
+        $(this).next().children().css('font-weight', 'bold');
+    });
+
+    // 5. When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+    $('li').on('click', function() {
+        $(this)
+            .parent()
+            .children()
+            .first()
+            .css('color', 'blue');
+    });
+
 </script>
 </body>
 </html>
