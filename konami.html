@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    var code = "38 38 40 40 37 39 37 39 66 65";
+    var attempt = "";
+
+    $(document).keyup(function(event){
+        console.log('code: ', code);
+        
+        attempt += ` ${event.keyCode}`;
+        console.log(event.keyCode);
+        console.log(attempt);
+        if(attempt.trim() === code){
+            $("body").css("background-image", "url('img/f386aa00-d8d3-11eb-afdd-f6e00353844c.jpeg')")
+            .css("color", "white")
+            .css("background-color", "black")
+            .css("background-repeat", "no-repeat")
+            .css("background-position","center -20%")
+            .css("background-size","cover");
+            alert("You gained 30 lives!");
+
+        }
+    });
+</script>
+</body>
+</html>
